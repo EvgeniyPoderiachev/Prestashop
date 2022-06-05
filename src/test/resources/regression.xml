@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="tests.base.AnnotationTransformer"/>
+        <listener class-name="tests.base.TestListener"/>
+    </listeners>
+    <test name="Cart">
+        <classes>
+            <class name="tests.AddressFieldTest"/>
+        </classes>
+    </test>
+    <test name="Checkout">
+        <classes>
+            <class name="tests.RegistrationTest"/>
+        </classes>
+    </test>
+    <test name="Login">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
