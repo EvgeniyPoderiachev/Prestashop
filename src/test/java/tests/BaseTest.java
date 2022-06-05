@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import pages.AccountPage;
 import pages.AddressFieldPage;
 import pages.LoginPage;
+import pages.RegistrationPage;
+
 import java.time.Duration;
 
 public class BaseTest {
@@ -17,6 +19,7 @@ public class BaseTest {
     LoginPage loginPage;
     AccountPage accountPage;
     AddressFieldPage addressFieldPage;
+    RegistrationPage registrationPage;
 
     @BeforeMethod
     public void setup() {
@@ -30,6 +33,7 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
         addressFieldPage = new AddressFieldPage(driver);
+        registrationPage = new RegistrationPage(driver);
 
     }
 
