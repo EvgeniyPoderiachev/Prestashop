@@ -1,6 +1,7 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,8 +13,9 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 
 import java.time.Duration;
-
+@Log4j2
 public class BaseTest {
+
 
     WebDriver driver;
     LoginPage loginPage;
@@ -34,6 +36,10 @@ public class BaseTest {
         accountPage = new AccountPage(driver);
         addressFieldPage = new AddressFieldPage(driver);
         registrationPage = new RegistrationPage(driver);
+
+        log.error("error");
+        log.info("info");
+        log.debug("debug");
 
     }
 
